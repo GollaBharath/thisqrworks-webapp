@@ -1,6 +1,8 @@
 (() => {
 	const statusMessage = document.getElementById("status-message");
 	const profileList = document.getElementById("profile-links");
+	const explainer = document.getElementById("explainer");
+	const profileShell = document.getElementById("profile");
 
 	// Resolver table maps platform codes to metadata and link builders.
 	const PLATFORM_RESOLVERS = {
@@ -134,6 +136,24 @@
 		profileList.innerHTML = "";
 	}
 
+	function showExplainer() {
+		if (explainer) {
+			explainer.hidden = false;
+		}
+		if (profileShell) {
+			profileShell.hidden = true;
+		}
+	}
+
+	function showProfile() {
+		if (explainer) {
+			explainer.hidden = true;
+		}
+		if (profileShell) {
+			profileShell.hidden = false;
+		}
+	}
+
 	/**
 	 * Centralized control flow ensures a single point of failure handling.
 	 * Individual errors are mapped to calm, user-friendly descriptions.
@@ -141,8 +161,10 @@
 	function processHash() {
 		try {
 			const payload = readPayload();
+			showProfile();
 			renderProfiles(payload);
 		} catch (error) {
+			showExplainer();
 			switch (error.message) {
 				case "empty-hash":
 					showStatus("No profile data found.");

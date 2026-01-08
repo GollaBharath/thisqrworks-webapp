@@ -72,7 +72,7 @@
 
 	function clearPreview() {
 		qrPreview.innerHTML = "";
-		qrCaption.textContent = "QR preview uses the link above.";
+		qrCaption.textContent = "QR preview.";
 		lastSvgMarkup = "";
 		if (lastObjectUrl) {
 			URL.revokeObjectURL(lastObjectUrl);
@@ -105,7 +105,7 @@
 			new Blob([lastSvgMarkup], { type: "image/svg+xml" })
 		);
 		downloadButton.dataset.url = lastObjectUrl;
-		qrCaption.textContent = "Generated locally. Save or share as needed.";
+		qrCaption.textContent = "QR Generated.";
 	}
 
 	async function copyLink() {
@@ -164,7 +164,7 @@
 		const shareLink = buildShareLink(socialMap);
 		linkOutput.value = shareLink;
 		results.hidden = false;
-		setStatus("Generated locally. Nothing is stored or sent.");
+		setStatus("");
 		renderQr(shareLink);
 	}
 

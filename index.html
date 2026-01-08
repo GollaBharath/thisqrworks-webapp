@@ -9,13 +9,28 @@
 	<body>
 		<header class="site-header" role="banner">
 			<div class="brand-mark" aria-label="This QR Works">
-				<span class="brand-symbol" aria-hidden="true">[]</span>
+				<!-- <span class="brand-symbol" aria-hidden="true">[]</span> -->
 				<span class="brand-text">thisqrworks</span>
 			</div>
 			<a class="quiet-link" href="create.html">Create your own QR</a>
 		</header>
+		<section id="explainer">
+			<h1>thisqrworks</h1>
 
-		<main class="content" role="main">
+			<p>
+				This site displays all your Social media handles in one place with just
+				1 QR.
+			</p>
+
+			<p>
+				All of your data is encoded directly into QR code. No signup/create
+				account fuss, just create a QR, and share it.
+			</p>
+
+			<p>If you scanned a QR code, the profile should appear automatically.</p>
+		</section>
+
+		<main id="profile" class="content" role="main" hidden>
 			<section class="profile-card" aria-live="polite">
 				<h1 class="card-title">Profile</h1>
 				<p id="status-message" class="status-message">
@@ -26,10 +41,7 @@
 		</main>
 
 		<footer class="site-footer" role="contentinfo">
-			<small
-				>Secure QR profiles since 2026.
-				<a class="quiet-link" href="create.html">Create your own QR</a></small
-			>
+			<small>No logins. No dashboards. No nonsense. </small>
 		</footer>
 
 		<noscript>
