@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Identity Profile</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header class="site-header" role="banner">
+			<div class="brand-mark" aria-label="This QR Works">
+				<span class="brand-symbol" aria-hidden="true">[]</span>
+				<span class="brand-text">thisqrworks</span>
+			</div>
+		</header>
+
+		<main class="content" role="main">
+			<section class="profile-card" aria-live="polite">
+				<h1 class="card-title">Profile</h1>
+				<p id="status-message" class="status-message">
+					Loading profile data...
+				</p>
+				<ul id="profile-links" class="profile-links" hidden></ul>
+			</section>
+		</main>
+
+		<footer class="site-footer" role="contentinfo">
+			<small>Secure QR profiles since 2026.</small>
+		</footer>
+
+		<noscript>
+			<p class="noscript">
+				This page requires JavaScript to decode the QR profile.
+			</p>
+		</noscript>
+
+		<script src="script.js"></script>
+	</body>
+</html>
