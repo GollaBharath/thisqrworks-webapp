@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Create QR | This QR Works</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header class="site-header" role="banner">
+			<div class="brand-mark" aria-label="This QR Works">
+				<span class="brand-symbol" aria-hidden="true">[]</span>
+				<span class="brand-text">thisqrworks</span>
+			</div>
+			<a class="quiet-link" href="index.html">View a profile</a>
+		</header>
+
+		<main class="content" role="main">
+			<section class="create-card" aria-live="polite">
+				<h1 class="card-title">Create your own QR</h1>
+				<p class="card-lede">
+					Generate a profile payload locally. Nothing is saved or sent anywhere.
+				</p>
+
+				<form id="create-form" class="create-form" novalidate>
+					<div class="field-grid">
+						<div class="field-group">
+							<label class="field-label" for="wa-id">WhatsApp (phone)</label>
+							<input
+								class="text-input"
+								id="wa-id"
+								name="wa"
+								type="text"
+								autocomplete="tel"
+								placeholder="e.g. +15551234567" />
+							<p class="helper-text">Include country code if public.</p>
+						</div>
+
+						<div class="field-group">
+							<label class="field-label" for="dc-id">Discord (user ID)</label>
+							<input
+								class="text-input"
+								id="dc-id"
+								name="dc"
+								type="text"
+								autocomplete="off"
+								placeholder="e.g. 123456789012345678" />
+							<p class="helper-text">User ID only; no tags or handles.</p>
+						</div>
+
+						<div class="field-group">
+							<label class="field-label" for="fb-id">Facebook (profile)</label>
+							<input
+								class="text-input"
+								id="fb-id"
+								name="fb"
+								type="text"
+								autocomplete="off"
+								placeholder="e.g. example.profile" />
+							<p class="helper-text">Username or profile slug.</p>
+						</div>
+
+						<div class="field-group">
+							<label class="field-label" for="ig-id">Instagram (handle)</label>
+							<input
+								class="text-input"
+								id="ig-id"
+								name="ig"
+								type="text"
+								autocomplete="off"
+								placeholder="e.g. samplehandle" />
+							<p class="helper-text">Handle only; no @ symbol needed.</p>
+						</div>
+
+						<div class="field-group">
+							<label class="field-label" for="yt-id">YouTube (channel)</label>
+							<input
+								class="text-input"
+								id="yt-id"
+								name="yt"
+								type="text"
+								autocomplete="off"
+								placeholder="e.g. @channelname or c/sample" />
+							<p class="helper-text">Channel handle, custom URL, or ID.</p>
+						</div>
+					</div>
+
+					<div class="actions">
+						<button class="button" type="submit">Generate QR</button>
+						<button class="ghost-button" id="clear-form" type="button">
+							Clear
+						</button>
+						<span class="muted-note" id="status-note"
+							>All inputs are optional.</span
+						>
+					</div>
+				</form>
+
+				<div id="results" hidden>
+					<div class="output-block">
+						<div class="output-row">
+							<input
+								class="mono-output"
+								id="share-link"
+								type="text"
+								readonly
+								aria-label="Shareable link" />
+							<button class="ghost-button" id="copy-link" type="button">
+								Copy link
+							</button>
+						</div>
+					</div>
+
+					<div class="qr-panel">
+						<p class="muted-note" id="qr-caption">
+							QR preview uses the link above.
+						</p>
+						<div class="qr-preview" id="qr-preview" aria-live="polite"></div>
+						<div class="actions">
+							<button class="ghost-button" id="download-qr" type="button">
+								Download SVG
+							</button>
+							<button class="ghost-button" id="copy-svg" type="button">
+								Copy SVG
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="site-footer" role="contentinfo">
+			<small
+				>Secure QR profiles since 2026.
+				<a class="quiet-link" href="index.html">View a profile</a></small
+			>
+		</footer>
+
+		<noscript>
+			<p class="noscript">
+				This page needs JavaScript to build the QR payload.
+			</p>
+		</noscript>
+
+		<script src="qrcode.js"></script>
+		<script src="create.js"></script>
+	</body>
+</html>
