@@ -402,6 +402,24 @@ body {
 	font-size: 0.9rem;
 }
 
+.footer-ad {
+	margin-top: 2rem;
+	padding-top: 1.25rem;
+	border-top: 1px solid #e0e4ea;
+	text-align: center;
+}
+
+.ad-label {
+	margin: 0 0 0.5rem;
+	font-size: 0.85rem;
+	color: #5a5f66;
+}
+
+.footer-ad .adsbygoogle {
+	width: 100%;
+	min-height: 90px;
+}
+
 @media (prefers-reduced-motion: reduce) {
 	*,
 	*::before,

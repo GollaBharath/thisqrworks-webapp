@@ -154,6 +154,23 @@ body {
 
 .faq-question {
 	font-size: 1.125rem;
+}
+.footer-ad {
+	margin-top: 2rem;
+	padding-top: 1.25rem;
+	border-top: 1px solid var(--color-border);
+	text-align: center;
+}
+
+.ad-label {
+	margin: 0 0 0.5rem;
+	font-size: 0.85rem;
+	color: var(--color-muted);
+}
+
+.footer-ad .adsbygoogle {
+	width: 100%;
+	min-height: 90px;
 	font-weight: 600;
 	margin-bottom: 0.5rem;
 	color: var(--color-text);
