@@ -53,7 +53,7 @@
 		const payload = { v: 1, uid: generateUid(), s: socialMap };
 		const serialized = JSON.stringify(payload);
 		const encoded = base64UrlEncode(serialized);
-		const baseUrl = new URL("/", window.location.href);
+		const baseUrl = new URL("profile.html", window.location.href);
 		baseUrl.hash = encoded;
 		return baseUrl.toString();
 	}

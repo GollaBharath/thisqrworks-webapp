@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta
+			name="description"
+			content="View social media profiles from QR codes. Free QR code social media link tool - no login, no signup required. Display all social links in one place instantly." />
+		<meta
+			name="keywords"
+			content="QR code social media, social media QR viewer, Instagram QR, WhatsApp QR, Facebook QR, free social QR" />
+		<meta name="robots" content="index, follow" />
+		<link rel="canonical" href="https://thisqr.works/socials/" />
+		<title>View Social Media QR Profile - Free Tool | thisqr.works</title>
+		<link rel="stylesheet" href="style.css" />
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "SoftwareApplication",
+				"name": "Social Media QR Code Viewer",
+				"applicationCategory": "UtilitiesApplication",
+				"operatingSystem": "Any",
+				"offers": {
+					"@type": "Offer",
+					"price": "0",
+					"priceCurrency": "USD"
+				},
+				"description": "Free tool to view social media profiles from QR codes. No login required.",
+				"url": "https://thisqr.works/socials/"
+			}
+		</script>
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"position": 1,
+						"name": "Home",
+						"item": "https://thisqr.works/"
+					},
+					{
+						"@type": "ListItem",
+						"position": 2,
+						"name": "Social Media QR",
+						"item": "https://thisqr.works/socials/"
+					}
+				]
+			}
+		</script>
+	</head>
+	<body>
+		<header class="site-header" role="banner">
+			<div class="brand-mark" aria-label="thisqr.works">
+				<a href="/" class="brand-link">thisqr.works</a>
+			</div>
+			<a
+				class="quiet-link"
+				href="create.html"
+				aria-label="Create your own social media QR code"
+				>Create QR Code</a
+			>
+		</header>
+		<section id="explainer">
+			<h1>Free Social Media QR Code Viewer</h1>
+
+			<p>
+				View all social media profiles from a single QR code. This free tool
+				displays WhatsApp, Instagram, Facebook, YouTube, and Discord links
+				instantly—no login or signup required.
+			</p>
+
+			<p>
+				All data is encoded directly into the QR code. No account creation, no
+				registration, no server storage—just scan the QR code and access all
+				social media links immediately.
+			</p>
+
+			<p>
+				If you scanned a QR code, the profile will appear automatically below.
+			</p>
+		</section>
+
+		<main id="profile" class="content" role="main" hidden>
+			<section class="profile-card" aria-live="polite">
+				<h2 class="card-title">Social Media Profile</h2>
+				<p id="status-message" class="status-message">
+					Loading profile data...
+				</p>
+				<ul id="profile-links" class="profile-links" hidden></ul>
+			</section>
+		</main>
+
+		<footer class="site-footer" role="contentinfo">
+			<small>No logins. No dashboards. No nonsense. </small>
+		</footer>
+
+		<noscript>
+			<p class="noscript">
+				This page requires JavaScript to decode the QR profile.
+			</p>
+		</noscript>
+
+		<script src="script.js"></script>
+	</body>
+</html>
