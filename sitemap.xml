@@ -5,7 +5,7 @@
   <!-- Homepage - Highest Priority -->
   <url>
     <loc>https://thisqr.works/</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -13,7 +13,7 @@
   <!-- Social Media QR Tool - Main Landing -->
   <url>
     <loc>https://thisqr.works/socials/</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -21,18 +21,33 @@
   <!-- Social Media QR Creator -->
   <url>
     <loc>https://thisqr.works/socials/create.html</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
-  <!-- Add future tools here as:
+  <!-- QR Generator -->
   <url>
-    <loc>https://thisqr.works/TOOLNAME/</loc>
-    <lastmod>YYYY-MM-DD</lastmod>
+    <loc>https://thisqr.works/qr/</loc>
+    <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
-  -->
-  
+
+  <!-- QR Decoder -->
+  <url>
+    <loc>https://thisqr.works/decode/</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Custom QR -->
+  <url>
+    <loc>https://thisqr.works/custom/</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
 </urlset>

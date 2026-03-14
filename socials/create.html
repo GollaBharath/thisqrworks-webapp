@@ -1,22 +1,28 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta
 			name="description"
-			content="Free QR code generator for social media profiles. Create a single QR code for all your social links - Instagram, WhatsApp, Facebook, YouTube, Discord. No login or signup required." />
+			content="Create one QR code for your social links. Add only the platforms you use. Free, no login, and fast on thisqr.works." />
 		<meta
 			name="keywords"
-			content="social media QR code generator, free QR creator, Instagram QR code, WhatsApp QR, social links QR, no login QR generator" />
+			content="social media qr code, link in bio qr, instagram qr, whatsapp qr, thisqrworks, this qr works" />
 		<meta name="robots" content="index, follow" />
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="thisqr.works" />
+		<meta property="og:title" content="Create Social Media QR | thisqr.works" />
+		<meta
+			property="og:description"
+			content="Build one QR code for all your social profiles." />
+		<meta
+			property="og:url"
+			content="https://thisqr.works/socials/create.html" />
+		<meta name="twitter:card" content="summary" />
 		<link rel="canonical" href="https://thisqr.works/socials/create.html" />
-		<title>Create Social Media QR Code Free - No Login | thisqr.works</title>
+		<title>Create Social Media QR Code | thisqr.works</title>
 		<link rel="stylesheet" href="style.css" />
-		<script
-			async
-			src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4430613850787517"
-			crossorigin="anonymous"></script>
 		<script type="application/ld+json">
 			{
 				"@context": "https://schema.org",
@@ -29,9 +35,9 @@
 					"price": "0",
 					"priceCurrency": "USD"
 				},
-				"description": "Free QR code generator for social media. Create QR codes for Instagram, WhatsApp, Facebook, YouTube, Discord. No login required.",
+				"description": "Create one QR code for your social profiles with no login.",
 				"url": "https://thisqr.works/socials/create.html",
-				"featureList": "WhatsApp QR code, Instagram QR code, Facebook QR code, YouTube QR code, Discord QR code, No login required, Instant generation"
+				"featureList": "WhatsApp, Instagram, Facebook, YouTube, Discord, No login, Instant generation"
 			}
 		</script>
 		<script type="application/ld+json">
@@ -76,11 +82,9 @@
 
 		<main class="content" role="main">
 			<section class="create-card" aria-live="polite">
-				<h1 class="card-title">Create Free Social Media QR Code</h1>
+				<h1 class="card-title">Create Social Media QR Code</h1>
 				<p class="card-lede">
-					Generate a free QR code with all your social media links. No login, no
-					signup required. Add WhatsApp, Instagram, Facebook, YouTube, and
-					Discord. Enter only the platforms you use.
+					Add your links, generate one QR code, and share.
 				</p>
 
 				<form id="create-form" class="create-form" novalidate>
@@ -120,7 +124,7 @@
 								type="text"
 								autocomplete="off"
 								placeholder="e.g. @username" />
-							<p class="helper-text">Enter your insta handle.</p>
+							<p class="helper-text">Your handle.</p>
 						</div>
 
 						<div class="field-group">
@@ -144,9 +148,7 @@
 								type="text"
 								autocomplete="off"
 								placeholder="e.g. 123456789012345678" />
-							<p class="helper-text">
-								Please use User ID | @user is not supported.
-							</p>
+							<p class="helper-text">Use Discord user ID.</p>
 						</div>
 					</div>
 
@@ -156,7 +158,7 @@
 							Clear
 						</button>
 						<span class="muted-note" id="status-note"
-							>All inputs are optional.</span
+							>All fields are optional.</span
 						>
 					</div>
 				</form>
@@ -186,29 +188,31 @@
 							<button class="ghost-button" id="copy-svg" type="button">
 								Copy SVG
 							</button>
+							<a class="ghost-button" id="customize-link" href="/custom/">
+								Customize QR
+							</a>
 						</div>
 					</div>
 				</div>
 			</section>
 		</main>
 
-		<section class="footer-ad" aria-label="Advertisement">
-			<p class="ad-label">Advertisement</p>
-			<!-- Footer_Ad -->
-			<ins
-				class="adsbygoogle"
-				style="display: block"
-				data-ad-client="ca-pub-4430613850787517"
-				data-ad-slot="2466046427"
-				data-ad-format="auto"
-				data-full-width-responsive="true"></ins>
-			<script>
-				(adsbygoogle = window.adsbygoogle || []).push({});
-			</script>
-		</section>
-
 		<footer class="site-footer" role="contentinfo">
-			<small>No logins. No dashboards. No nonsense. </small>
+			<p>
+				<small>
+					Contact
+					<a class="footer-link" href="mailto:gollabharath2007@gmail.com">me</a>
+					to show your ads here.
+				</small>
+			</p>
+			<p>
+				<small
+					>Made with &#10084;&#65039; by
+					<a class="footer-link" href="https://gollabharath.me"
+						>Bharath</a
+					></small
+				>
+			</p>
 		</footer>
 
 		<noscript>
@@ -218,6 +222,7 @@
 		</noscript>
 
 		<script src="qrcode.js"></script>
+		<script src="/customize-link-helper.js"></script>
 		<script src="create.js"></script>
 	</body>
 </html>

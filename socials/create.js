@@ -7,8 +7,10 @@
 	const downloadButton = document.getElementById("download-qr");
 	const copySvgButton = document.getElementById("copy-svg");
 	const clearButton = document.getElementById("clear-form");
+	const customizeLink = document.getElementById("customize-link");
 	const qrPreview = document.getElementById("qr-preview");
 	const qrCaption = document.getElementById("qr-caption");
+	const customizeHelper = window.ThisQrWorksCustomize;
 
 	const PLATFORM_FIELDS = [
 		{ code: "wa", input: document.getElementById("wa-id"), label: "WhatsApp" },
@@ -32,7 +34,7 @@
 		const bytes = new Uint8Array(16);
 		crypto.getRandomValues(bytes);
 		return Array.from(bytes, (byte) => byte.toString(16).padStart(2, "0")).join(
-			""
+			"",
 		);
 	}
 
@@ -74,6 +76,13 @@
 		qrPreview.innerHTML = "";
 		qrCaption.textContent = "QR preview.";
 		lastSvgMarkup = "";
+		if (customizeLink) {
+			if (customizeHelper) {
+				customizeHelper.resetCustomizeHref(customizeLink);
+			} else {
+				customizeLink.setAttribute("href", "/custom/");
+			}
+		}
 		if (lastObjectUrl) {
 			URL.revokeObjectURL(lastObjectUrl);
 			lastObjectUrl = null;
@@ -94,7 +103,7 @@
 			svgElement.setAttribute("role", "img");
 			svgElement.setAttribute(
 				"aria-label",
-				"QR code for the generated profile link"
+				"QR code for the generated profile link",
 			);
 		}
 
@@ -102,10 +111,21 @@
 			URL.revokeObjectURL(lastObjectUrl);
 		}
 		lastObjectUrl = URL.createObjectURL(
-			new Blob([lastSvgMarkup], { type: "image/svg+xml" })
+			new Blob([lastSvgMarkup], { type: "image/svg+xml" }),
 		);
 		downloadButton.dataset.url = lastObjectUrl;
 		qrCaption.textContent = "QR Generated.";
+
+		if (customizeLink) {
+			if (customizeHelper) {
+				customizeHelper.applyCustomizeHref(customizeLink, link);
+			} else {
+				customizeLink.setAttribute(
+					"href",
+					`/custom/?data=${encodeURIComponent(link)}`,
+				);
+			}
+		}
 	}
 
 	async function copyLink() {
