@@ -1,42 +1,74 @@
 # thisqr.works
 
-**thisqr.works** is a collection of QR-first tools—simple, privacy-respecting utilities that work without login, tracking, or unnecessary complexity.
+`thisqr.works` is a static, browser-first QR toolkit.
 
-> Static web project for thisqr.works
+Core idea: fast tools, no signup, no account flow.
 
-## Philosophy
+## What Is Included
 
-- No login required
-- No user accounts
-- No tracking (beyond basic analytics)
-- No server-side data storage
-- Fast, client-side processing
-- SEO-friendly
-- Simple, honest explanations
+- `QR Generator` (`/qr/`): Generate QR codes from text or URLs and export SVG.
+- `Custom QR` (`/custom/`): Style QR codes (colors, geometry, gradients) and export.
+- `QR Decoder` (`/decode/`): Decode QR content from image upload or camera scan.
+- `Social Media QR` (`/socials/create.html`): Build one QR that points to your socials profile.
 
-## Structure
+## Project Structure
 
-The repository is organized with each tool in its own directory:
-
+```text
+/                     # Homepage / tool index
+/qr/                  # Basic QR generator
+/custom/              # Styled/custom QR generator
+/decode/              # QR decoder (upload + camera)
+/socials/             # Social profile + social QR creator
+/main.css             # Homepage styles
+/customize-link-helper.js
+/robots.txt
+/sitemap.xml
+/SEO-IMPLEMENTATION.md
 ```
-/                 → Main homepage / tool directory
-/socials/         → Share Your Socials tool
+
+## Local Development
+
+This is a static site, so any static server works.
+
+### Option 1: Python
+
+```bash
+python3 -m http.server 8080
 ```
 
-### Available Tools
+Open `http://localhost:8080`.
 
-#### Share Your Socials (`/socials/`)
+### Option 2: Node (if `npx` is available)
 
-Create a single QR code that displays all your social media handles. Data is encoded directly into the QR code—no signup, no server storage.
+```bash
+npx serve .
+```
 
-## Development
+## Deployment
 
-This is a static site. Simply open `index.html` in a browser or serve via any static web server.
+Deploy to any static host:
 
-## Adding New Tools
+- GitHub Pages
+- Netlify
+- Vercel (static)
+- Cloudflare Pages
 
-To add a new tool:
+Ensure these files remain at the site root after deploy:
 
-1. Create a new directory: `/toolname/`
-2. Add your tool's HTML, CSS, JS to that directory
-3. Update the root `index.html` to list the new tool
+- `robots.txt`
+- `sitemap.xml`
+- `favicon.ico`, `favicon.svg`, `apple-touch-icon.png`
+
+## Notes
+
+- Most features run client-side in the browser.
+- Camera-based decode requires HTTPS in production (or localhost in development).
+- SEO metadata and structured data are implemented across tool pages.
+
+## Add A New Tool
+
+1. Create a folder like `/my-tool/`.
+2. Add `index.html`, `style.css`, and `script.js`.
+3. Add a card/link on root `index.html`.
+4. Add canonical/meta/schema markup for SEO consistency.
+5. Update `sitemap.xml` if the new page should be indexed.
